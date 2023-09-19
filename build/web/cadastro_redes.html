@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Net Telecom</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            .botao{
+                 margin: 10px 0;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 19px;
+                background-color: #6a80ff;
+                color:white;
+
+            }
+            
+            .contai {           
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+              </style>
+    </head>
+    <body class="contai">
+        <img src="" alt="" width="300" height="200"/>
+        <form name="FormCadastro"  method="post" action="cadastro_redes.jsp">
+            
+            
+        
+            Nome da Rede WI-FI: <input type="text" name="nome_c"> <p>
+            Endereço: <input type="text" name="end_c"> <p>
+                
+                
+            Plano de Assinatura:     
+                <input type="radio" name="plano" value="2,4GHz 100R$">
+                <label>100MB 100R$ </label>
+                <input type="radio" name="plano" value="5GHz 180R$">
+                <label >200MB 180R$</label>
+                <input type="radio" name="plano" value="Plano Familia 200R$">
+                <label > 300MB 200R$ </label> <p> 
+                 <br>
+        <label for="contato">
+            Contato:
+        </label>
+        <input type="text" id="contato_c" name="contato_c" required>
+        <br>
+         
+            <input class="botao" type="submit" value="Salvar" name="salvar">
+            <input class="botao" type="reset" value="Limpar">
+                
+             <p>                   
+            
+        </form>
+        
+        
+    </body>
+</html>
