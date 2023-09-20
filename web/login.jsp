@@ -28,7 +28,7 @@
                 Statement stmt = conexao.createStatement();
              
              String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('" + 
-                cad.getCpf() + "','" + cad.getNome() + "','" + cad.getSenha() + "')";
+                cad.getNome() + "','" + cad.getCpf() + "','" + cad.getSenha() + "')";
 
             
               //String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('475841', 'Gabriel', 'as')";
