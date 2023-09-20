@@ -9,8 +9,8 @@
 </head>
 <body>
     <%
-        String nome = request.getParameter("nome");
         String cpf = request.getParameter("cpf");
+        String nome = request.getParameter("nome");       
         String senha = request.getParameter("senha");
         String repetirSenha = request.getParameter("repetir_senha");
 
@@ -27,8 +27,9 @@
 
                 Statement stmt = conexao.createStatement();
              
-                String sql = "INSERT INTO usuarios ()  VALUES ('" + 
-              cad.getCpf()+ "','" +cad.getNome()+ "','" + cad.getSenha()+"')";
+             String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('" + 
+                cad.getCpf() + "','" + cad.getNome() + "','" + cad.getSenha() + "')";
+
             
               //String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('475841', 'Gabriel', 'as')";
         

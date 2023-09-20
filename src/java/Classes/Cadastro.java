@@ -8,8 +8,8 @@ public class Cadastro {
     
     
     public Cadastro(String nome, String cpf, String senha) {
-        this.nome = nome;
         this.cpf = cpf;
+        this.nome = nome;
         this.senha = senha;
     }
 
