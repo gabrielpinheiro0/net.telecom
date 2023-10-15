@@ -47,8 +47,10 @@
 
                 Statement stmt = conexao.createStatement();
              
-                 String sql = "INSERT INTO planos () VALUES ('0','" + 
-          red.getNome_c()+ "','" +red.getPlano()+ "','" + red.getEnd_c()+"','" +red.getContato_c()+"')";
+                String sql = "INSERT INTO planos (nome_c, plano, end_c, contato_c, usuarios_cpf) VALUES ('" + red.getUsuarios_cpf() + "','" + red.getNome_c() + "','" + red.getPlano() + "','" + red.getEnd_c() + "','" + red.getContato_c() + "')";
+
+                 // String sql = "INSERT INTO planos () VALUES ('0','" + 
+          //red.getNome_c()+ "','" +red.getPlano()+ "','" + red.getEnd_c()+"','" +red.getContato_c()+"')";
          
           // String sql = "INSERT INTO planos (id, nome_c, plano, end_c, contato_c) VALUES ('0', 'Mateus', 'Net', 'RUa x', '11000000')";
                 stmt.executeUpdate(sql);

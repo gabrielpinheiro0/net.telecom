@@ -36,7 +36,7 @@
                 stmt.executeUpdate(sql);
                 stmt.close();
                 
-                out.println("<br> O registro foi feito com sucesso!");
+                   response.sendRedirect("menu_cliente.html");
             } catch (Exception ex) {
                 out.println("<br> Error:" + ex);
             }

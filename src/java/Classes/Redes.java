@@ -8,7 +8,7 @@ public class Redes {
     private String plano;  // plano de assinatura
     private String end_c;  // endereço
     private String contato_c; // contato do cliente
-
+    private String usuarios_cpf; // foreing key
    
     
     public Redes( String nome_c,String plano,String end_c, String contato_c) {
@@ -27,8 +27,10 @@ public class Redes {
         return plano;
     }
 
-
-
+    public String getUsuarios_cpf() {
+        return usuarios_cpf;
+    }
+    
     public String getEnd_c() {
         return end_c;
     }
@@ -36,8 +38,6 @@ public class Redes {
     public String getContato_c() {
         return contato_c;
     }
-
-
 
    
 
@@ -50,7 +50,9 @@ public class Redes {
         this.plano = plano;
     }
 
-
+   public void setUsuarios_cpf(String usuarios_cpf) {
+        this.usuarios_cpf = usuarios_cpf;
+    }
 
     public void setEnd_c(String end_c) {
         this.end_c = end_c;
