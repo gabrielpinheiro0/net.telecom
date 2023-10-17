@@ -47,12 +47,12 @@
 
                 Statement stmt = conexao.createStatement();
              
-                String sql = "SELECT * FROM usuarios WHERE cpf = '" + cpf + "' AND senha = '" + senha + "'";
+                String sql = "SELECT * FROM usuarios WHERE cpf = '" + red.getCpf() + "' AND senha = '" + red.getSenha() + "'";
                 ResultSet rs = stmt.executeQuery(sql);
                 
                 if (rs.next()) {
             
-            response.sendRedirect("menu_cliente.html");
+                response.sendRedirect("menu_cliente.html");
                
            } 
            
