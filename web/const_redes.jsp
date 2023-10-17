@@ -44,16 +44,16 @@
     </head>
     <body class="contai">
           <img src="./img/logo.png" alt="" width="300" height="200"/>
-           <h1>Lista de Redes/Cliente</h1>                  
+           <h1>Dados do Plano</h1>                  
         <%             
                            
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver"); 
-                String url = "jdbc:mysql://localhost:3306/telecom"; 
+                String url = "jdbc:mysql://localhost:3306/planos"; 
                 Connection conexao = DriverManager.getConnection(url, "root", "");           
 
                 Statement stmt = conexao.createStatement();            
-                String sql = "SELECT * FROM redes";       
+                String sql = "SELECT * FROM planos";       
                 
                 ResultSet red = stmt.executeQuery(sql);
         %>        
