@@ -28,7 +28,7 @@
             
                 ResultSet rs = stmt.executeQuery(sql);
                 while (rs.next()) {
-                    out.println("<br> Nome do Assinante: " + rs.getString("nome_c"));
+                    out.println("<br> Nome da Rede: " + rs.getString("nome_c"));
                     out.println("<br> Seu Plano: " + rs.getString("plano"));
                     out.println("<br> Endereço de Cadastro: " + rs.getString("end_c"));
                     out.println("<br> Contato: " + rs.getString("contato_c"));
