@@ -36,11 +36,12 @@
            String plano = request.getParameter("plano");
            String end_c = request.getParameter("end_c");
            String contato_c = request.getParameter("contato_c");
+           String vencimento = request.getParameter("vencimento");
            
            
            
 
-            Redes red = new Redes(usuarios_cpf, nome_c, plano, end_c, contato_c);
+            Redes red = new Redes(usuarios_cpf, nome_c, plano, end_c, contato_c, vencimento);
            
                 try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -49,7 +50,8 @@
 
                 Statement stmt = conexao.createStatement();
                  // String sql = "INSERT INTO planos (id, usuarios_cpf, nome_c, plano, end_c, contato_c) VALUES ('8', '76565465565', 'Gabriel', '100MB','Rua jorge paes', '12312312')";
-                String sql = "INSERT INTO planos (id, usuarios_cpf, nome_c, plano, end_c, contato_c) VALUES (0, '" + red.getUsuarios_cpf() + "','" + red.getNome_c() + "','" + red.getPlano() + "','" + red.getEnd_c() + "','" + red.getContato_c() + "')";
+                String sql = "INSERT INTO planos (usuarios_cpf, nome_c, plano, end_c, contato_c, vencimento) VALUES ('" + red.getUsuarios_cpf() + "','" + red.getNome_c() + "','" + red.getPlano() + "','" + red.getEnd_c() + "','" + red.getContato_c() + "','" + red.getVencimento() + "')";
+
                 stmt.executeUpdate(sql);
                 stmt.close();
                 

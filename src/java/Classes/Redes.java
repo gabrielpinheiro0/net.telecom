@@ -8,15 +8,16 @@ public class Redes {
     private String plano;  // plano de assinatura
     private String end_c;  // endereço
     private String contato_c; // contato do cliente
-    
+    private String vencimento; // data de vencimento
    
     
-    public Redes(String usuarios_cpf, String nome_c,String plano,String end_c, String contato_c) {
+    public Redes(String usuarios_cpf, String nome_c,String plano,String end_c, String contato_c, String vencimento) {
        this.usuarios_cpf = usuarios_cpf;
        this.nome_c  = nome_c;
        this.plano = plano;
        this.end_c = end_c;
        this.contato_c = contato_c;
+       this.vencimento = vencimento;
        
     
     }
@@ -59,6 +60,12 @@ public class Redes {
    public void setUsuarios_cpf(String usuarios_cpf) {
         this.usuarios_cpf = usuarios_cpf;
     }
-
+    public void setVencimento(String vencimento) {
+         this.vencimento = vencimento;
+    }
+    
+    public String getVencimento() {
+         return vencimento;
+    }
  
 }

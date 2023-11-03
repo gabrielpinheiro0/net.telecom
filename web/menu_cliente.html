@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title>Net Telecom</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    
-            
-             <style>
-                 
-             h1 {
+
+<head>
+    <title>Net Telecom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
             color: #836FFF;
             border: 2px solid black;
             padding: 10px;
-            text-align: center; 
-            }
-            .botao{
-                margin: 10px 0;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 19px;
-                background-color: #6a80ff;
-                color:white;
-                
-            }
-            
-            .contai {           
-               
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-               
-            }
-            
-            img{
-                margin-top: 10px; 
-            }
-        
-              </style>
-   
-    </head>
-    <body class="contai">
-        <h1>Net Telecom</h1>
-        <div class="contai">
-                <!--  botoes que leva a outras paginas-->
-              <button   class="botao"  onclick="document.location='cadastro_redes.html'">Cadastro de Novo Plano</button>
-              
-              <button   class="botao" onclick="document.location='index_consu.html'">Consultar Plano</button>
-                           
-              <button   class="botao"  onclick="document.location='delet_redes.html'">Alterar Data de Vencimento</button>
-                
-            </div>
-    </body>
+            text-align: center;
+        }
+
+        .contai {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .botao {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+            background-color: #6a80ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #4856b3;
+        }
+    </style>
+</head>
+
+<body class="contai">
+    <h1>Net Telecom</h1>
+    <div class="contai">
+
+        <button class="botao" onclick="document.location='cadastro_redes.html'">Cadastro de Novo Plano</button>
+
+        <button class="botao" onclick="document.location='index_consu.html'">Consultar Plano</button>
+
+        <button class="botao" onclick="document.location='alter_venc.html'">Alterar Data de Vencimento</button>
+    </div>
+</body>
+
 </html>

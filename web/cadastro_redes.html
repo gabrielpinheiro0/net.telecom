@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <html>
 <head>
     <title>Net Telecom</title>
@@ -6,12 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: white; 
-            color: black; 
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .botao {
-            margin: 10px 0;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6a80ff;
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            width: 80%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button {
             font-size: 16px;
             font-weight: 700;
             line-height: 19px;
@@ -21,71 +66,43 @@
             padding: 10px 20px;
             cursor: pointer;
         }
-
-        .contai {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        h1 {
-            color: #836FFF;
-            border: 2px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-        }
-
-        input[type="radio"] {
-            margin-right: 5px;
-        }
-
-        form {
-            width: 80%;
-            max-width: 400px;
-        }
     </style>
 </head>
-<body class="contai">
-    <h1>Net Telecom</h1>
-    <form name="FormCadastro"  method="post" action="cadastro_redes.jsp">
-        Nome da Rede WI-FI: <input type="text" name="nome_c"> <p>
-        Endereço: <input type="text" name="end_c"> <p>
-        
-        Plano de Assinatura:
-        <input type="radio" name="plano" value="10MB 100R$">
-        <label>100MB por apenas 100R$ </label>
-        <input type="radio" name="plano" value="5MB 180R$">
-        <label>200MB por apenas 180R$</label>
-        <input type="radio" name="plano" value="300MB 200R$">
-        <label>300MB por apenas 200R$ </label> <p>
-        
-        <label for="contato">
-       Contato:
-        </label>
-        <input type="text" id="contato_c" name="contato_c" required>
-        <br>
-        <label for="cpf">
-        Repita o CPF:
-        </label>
-        <input type="text" id="usuarios_cpf" name="usuarios_cpf" required>
-        <br>
-        <input class="botao" type="submit" value="Salvar" name="salvar">
-        <input class="botao" type="reset" value="Limpar">
-        <p>
-    </form>
+<body>
+    <div class="container">
+        <h1>Net Telecom</h1>
+        <form name="FormCadastro" method="post" action="cadastro_redes.jsp">
+            <label for="nome_c">Nome da Rede WI-FI:</label>
+            <input type="text" id="nome_c" name="nome_c">
+            
+            <label for="end_c">Endereço:</label>
+            <input type="text" id="end_c" name="end_c">
+            
+            <label for="plano">Plano de Assinatura:</label>
+            <select id="plano" name="plano">
+                <option value="10MB 100R$">100MB</option>
+                <option value="5MB 180R$">200MB</option>
+                <option value="300MB 200R$">300MB</option>
+            </select>
+            
+            <label for="contato_c">Contato:</label>
+            <input type="text" id="contato_c" name="contato_c" required>
+            
+            <label for="usuarios_cpf">Repita o CPF:</label>
+            <input type="text" id="usuarios_cpf" name="usuarios_cpf" required>
+            
+            <label for="vencimento">Data de Vencimento da Fatura:</label>
+            <select id="vencimento" name="vencimento" required>
+                <option value="dia 5">Dia 5 do próximo mês</option>
+                <option value="dia 10">Dia 10 do próximo mês</option>
+                <option value="dia 20">Dia 20 do próximo mês</option>
+            </select>
+            
+            <div class="button-container">
+                <input class="button" type="submit" value="Salvar" name="salvar">
+                <input class="button" type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
-

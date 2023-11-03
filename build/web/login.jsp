@@ -13,6 +13,7 @@
         String nome = request.getParameter("nome");       
         String senha = request.getParameter("senha");
         String repetirSenha = request.getParameter("repetir_senha");
+       
 
     if (!senha.equals(repetirSenha)) {
     %>
@@ -28,10 +29,10 @@
                 Statement stmt = conexao.createStatement();
              
              String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('" + 
-                cad.getNome() + "','" + cad.getCpf() + "','" + cad.getSenha() + "')";
+                cad.getNome() + "','" + cad.getCpf() + "','" + cad.getSenha()+ "')";
 
             
-              //String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('475841', 'Gabriel', 'as')";
+              //String sql = "INSERT INTO usuarios (cpf, nome, senha) VALUES ('47584171800', 'Gabriel', 'as')";
         
                 stmt.executeUpdate(sql);
                 stmt.close();
