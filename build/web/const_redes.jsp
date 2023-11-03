@@ -22,8 +22,8 @@
             margin: 10px 0;
             font-size: 16px;
             font-weight: 700;
-            background-color: #4682B4; /* Cor de fundo azul */
-            color: white; /* Cor do texto branco */
+            background-color: #4682B4; 
+            color: white; 
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
