@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<html>
+<head>
+    <title>Net Telecom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            background-color: #4682B4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contai {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #4682B4;
+        }
+        
+        form {
+            text-align: left;
+            width: 100%;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #4682B4;
+            border-radius: 5px;
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            background-color: #4682B4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="contai">
+    <h1>Alterar a Data de Vencimento</h1>
+   
+    <form name="alter_rede" method="post" action="alter_rede.jsp">
+        <h1>Informe seu CPF:</h1>
+        CPF: <input type="text" name="usuarios_cpf">
+        <br>
+        Digite um novo nome para sua rede WiFi:  
+        <label for="nome_c">Nome da Rede WI-FI:</label>
+        <input type="text" id="nome_c" name="nome_c">
+        <br>
+        <div class="button-container">
+            <input class="button" type="submit" value="Salvar" name="salvar">
+        </div>
+    </form>
+</body>
+</html>

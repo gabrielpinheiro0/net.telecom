@@ -41,7 +41,7 @@
         <%
             String cpf = request.getParameter("usuarios_cpf");
             String vencimento = request.getParameter("vencimento");
-
+             
             String url = "jdbc:mysql://localhost:3306/nettelecom";
             String usuario = "root";
             String senha = "";

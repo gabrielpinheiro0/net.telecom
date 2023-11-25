@@ -40,7 +40,7 @@
     <div class="content">
         <%
             String cpf = request.getParameter("usuarios_cpf");
-            String vencimento = request.getParameter("vencimento");
+            String nome_c = request.getParameter("nome_c");
              
             String url = "jdbc:mysql://localhost:3306/nettelecom";
             String usuario = "root";
@@ -52,22 +52,22 @@
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection(url, usuario, senha);
 
-                String sql = "UPDATE planos SET vencimento = ? WHERE usuarios_cpf = ?";
+                String sql = "UPDATE planos SET nome_c = ? WHERE usuarios_cpf = ?";
 
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
-                preparedStatement.setString(1, vencimento);
+                preparedStatement.setString(1, nome_c);
                 preparedStatement.setString(2, cpf);
 
                 int rowsUpdated = preparedStatement.executeUpdate();
 
                 if (rowsUpdated > 0) {
-                    out.println("Data de Vencimento atualizada com sucesso.");
+                    out.println("Nome da rede alterada com sucesso.");
                 } else {
                     out.println("Nenhum registro encontrado para o CPF: " + cpf);
                 }
 
             } catch (ClassNotFoundException e) {
-                out.println("Erro na atualização: Classe do driver não encontrada.");
+                out.println("");
             } catch (SQLException e) {
                 out.println("Erro na atualização: " + e.getMessage());
             } finally {
